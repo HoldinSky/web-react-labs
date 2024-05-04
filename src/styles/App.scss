@@ -1,0 +1,29 @@
+@use "colors" as c;
+
+body {
+  background-color: c.$tiffany;
+  color: c.$bistre;
+  font: italic small-caps bold 16px/2 cursive;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.self-center {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.reset-spacing {
+  margin: 0;
+  padding: 0;
+}

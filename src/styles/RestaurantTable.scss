@@ -1,0 +1,96 @@
+@use "colors" as c;
+
+@mixin seats($seats-count, $table-size, $seat-size) {
+  position: relative;
+  width: $table-size + $seat-size * 2;
+  aspect-ratio: 1;
+
+  transition: 0.2s;
+
+  .table {
+    position: absolute;
+    top: $seat-size;
+    left: $seat-size;
+
+    width: $table-size;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    p {
+      display: flex;
+      align-self: center;
+    }
+  }
+
+  .seat {
+    background: c.$atomic-tangerine;
+    position: absolute;
+    width: $seat-size;
+
+    top: ($table-size + $seat-size) / 2;
+    left: ($table-size + $seat-size) / 2;
+
+    $angle: (360 / $seats-count);
+    $rot: 0;
+
+    @for $i from 1 through $seats-count {
+      &:nth-of-type(#{$i}) {
+        transform: rotate($rot * 1deg) translate($table-size / 2) rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
+  }
+
+  > * {
+    aspect-ratio: 1;
+    border-radius: 100%;
+
+    background: c.$light-orange;
+    box-shadow: c.$shadow;
+  }
+
+  &:hover {
+    > * {
+      box-shadow: c.$shadow-hover;
+    }
+
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+}
+
+.table-container-1 {
+  @include seats($seats-count: 1, $table-size: 120px, $seat-size: 60px);
+}
+
+.table-container-2 {
+  @include seats($seats-count: 2, $table-size: 120px, $seat-size: 60px);
+}
+
+.table-container-3 {
+  @include seats($seats-count: 3, $table-size: 150px, $seat-size: 50px);
+}
+
+.table-container-4 {
+  @include seats($seats-count: 4, $table-size: 150px, $seat-size: 50px);
+}
+
+.table-container-5 {
+  @include seats($seats-count: 5, $table-size: 150px, $seat-size: 45px);
+}
+
+.table-container-6 {
+  @include seats($seats-count: 6, $table-size: 150px, $seat-size: 45px);
+}
+
+.table-container-7 {
+  @include seats($seats-count: 7, $table-size: 160px, $seat-size: 40px);
+}
+
+.table-container-8 {
+  @include seats($seats-count: 8, $table-size: 160px, $seat-size: 40px);
+}
+

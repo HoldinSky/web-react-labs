@@ -1,0 +1,29 @@
+@use "colors" as c;
+@use "sizes" as s;
+
+.hall-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 1000px;
+}
+
+.table-in-hall {
+  width: 30%;
+  margin: 12px;
+}
+
+.menu {
+  padding: s.$m s.$xxl;
+  background-color: c.$light-orange;
+  border-radius: s.$l;
+
+  transition: 0.2s;
+  box-shadow: c.$shadow;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: c.$shadow-hover;
+  }
+}
