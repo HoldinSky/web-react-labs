@@ -1,4 +1,4 @@
-@use "colors" as c;
+@use "App";
 
 @mixin seats($seats-count, $table-size, $seat-size) {
   position: relative;
@@ -25,7 +25,7 @@
   }
 
   .seat {
-    background: c.$atomic-tangerine;
+    background: App.$atomic-tangerine;
     position: absolute;
     width: $seat-size;
 
@@ -48,13 +48,13 @@
     aspect-ratio: 1;
     border-radius: 100%;
 
-    background: c.$light-orange;
-    box-shadow: c.$shadow;
+    background: App.$light-orange;
+    box-shadow: App.$shadow;
   }
 
   &:hover {
     > * {
-      box-shadow: c.$shadow-hover;
+      box-shadow: App.$shadow-hover;
     }
 
     transform: scale(1.05);

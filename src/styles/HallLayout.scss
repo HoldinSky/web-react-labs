@@ -1,5 +1,4 @@
-@use "colors" as c;
-@use "sizes" as s;
+@use "App";
 
 .hall-container {
   display: flex;
@@ -14,16 +13,6 @@
   margin: 12px;
 }
 
-.menu {
-  padding: s.$m s.$xxl;
-  background-color: c.$light-orange;
-  border-radius: s.$l;
-
-  transition: 0.2s;
-  box-shadow: c.$shadow;
-
-  &:hover {
-    cursor: pointer;
-    box-shadow: c.$shadow-hover;
-  }
+.menu-button {
+  background-color: App.$light-orange;
 }

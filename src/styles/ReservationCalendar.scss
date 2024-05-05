@@ -1,0 +1,60 @@
+@use "App";
+
+.reservation-calendar {
+  display: grid;
+  grid-auto-rows: auto;
+  width: 100%;
+
+  padding: App.$xl;
+
+  background-color: App.$vanilla;
+  border-radius: App.$l;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(14, App.$xxxl * 2);
+
+  height: App.$xxxl * 2;
+}
+
+.header-time {
+  transform: rotate(-45deg);
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+}
+
+.reservation-day {
+  display: grid;
+  grid-template-columns: repeat(14, App.$xxxl * 2);
+
+  height: App.$xxxl;
+}
+
+.reservation-cell {
+  width: 100%;
+  height: 100%;
+
+  transition: 0.1s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.reserved {
+    background-color: App.$atomic-tangerine;
+  }
+
+  &.free {
+    background-color: transparent;
+
+    &:hover {
+      background-color: App.$tiffany;
+    }
+  }
+
+  &.chosen {
+    background-color: App.$tiffany;
+  }
+}

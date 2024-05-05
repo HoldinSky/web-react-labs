@@ -1,9 +1,13 @@
+@forward "sizes";
+@forward "colors";
+
 @use "colors" as c;
+@use "sizes" as s;
 
 body {
   background-color: c.$tiffany;
   color: c.$bistre;
-  font: italic small-caps bold 16px/2 cursive;
+  font: italic small-caps bold s.$xl cursive;
 }
 
 .flex-column {
@@ -17,13 +21,48 @@ body {
   justify-content: left;
 }
 
-.self-center {
+.flex-self-center {
   display: flex;
   justify-content: center;
   align-self: center;
 }
 
+.grid-self-center {
+  align-self: center;
+  justify-self: center;
+}
+
 .reset-spacing {
   margin: 0;
   padding: 0;
+}
+
+.expander {
+  flex-grow: 100;
+}
+
+button {
+  display: block;
+
+  height: s.$button-height;
+  width: s.$button-height * s.$ratio;
+
+  border: none;
+  border-radius: s.$l;
+
+  box-shadow: c.$shadow;
+  transition: 0.2s;
+
+  font: italic small-caps bold s.$xl cursive;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: c.$shadow-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border: 0.1rem solid c.$bistre;
+    box-shadow: c.$shadow-hover;
+  }
 }

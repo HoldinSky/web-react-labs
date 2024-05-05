@@ -1,6 +1,5 @@
 import {ReactNode} from "react";
 import "../styles/Layout.scss";
-import "../styles/App.scss";
 
 interface Props {
     children: {

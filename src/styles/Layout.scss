@@ -1,5 +1,4 @@
-@use "colors" as c;
-@use "sizes" as s;
+@use "App";
 
 .layout-container {
   display: flex;
@@ -12,9 +11,9 @@
   };
 
   > * {
-    box-shadow: c.$layout-shadow;
-    border-radius: s.$lg;
-    background-color: c.$tea-green;
+    box-shadow: App.$layout-shadow;
+    border-radius: App.$xl;
+    background-color: App.$tea-green;
   }
 }
 
@@ -24,8 +23,8 @@
   display: flex;
 
   padding: {
-    left: s.$lg;
-    right: s.$lg;
+    left: App.$l;
+    right: App.$l;
   }
 }
 
@@ -34,15 +33,15 @@
   align-items: center;
 
   margin: {
-    top: s.$l;
-    bottom: s.$l;
+    top: App.$l;
+    bottom: App.$l;
   };
 
   flex-grow: 1;
 }
 
 .layout.header {
-  border-radius: 0 0 s.$lg s.$lg;
+  border-radius: 0 0 App.$xl App.$xl;
   min-height: 64px;
 
   flex-direction: row;
@@ -50,7 +49,7 @@
 }
 
 .layout.footer {
-  border-radius: s.$lg s.$lg 0 0;
+  border-radius: App.$xl App.$xl 0 0;
 
   flex-direction: row;
   align-items: center;
