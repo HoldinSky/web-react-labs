@@ -1,14 +1,10 @@
 import ReservationCalendar from "./ReservationCalendar";
-import "../styles/ReservationDialog.scss"
+import "../../../styles/ReservationDialog.scss"
 import {Dialog, DialogActions, DialogContent, DialogTitle, Input, styled} from "@mui/material";
 import React, {useCallback, useMemo, useState} from "react";
-import {ReservationRequest, useRequestContext} from "../misc/RequestContextProvider";
-import {REGEXP_IS_NUM, REGEXP_NOT_NUM} from "../misc/constants";
-
-export type ReservationWindow = {
-    from: Date;
-    to: Date;
-};
+import {ReservationRequest, useRequestContext} from "../../../misc/RequestContextProvider";
+import {REGEXP_IS_NUM, REGEXP_NOT_NUM} from "../../../misc/constants";
+import {ReservationWindow} from "../../../misc/types";
 
 const CustomDialog = styled(Dialog)(({theme}) => ({
     '& .MuiPaper-root': {

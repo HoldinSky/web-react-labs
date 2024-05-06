@@ -1,11 +1,11 @@
-import {ReservationWindow} from "./ReservationDialog";
 import {useEffect, useState} from "react";
-import "../styles/ReservationCalendar.scss";
-import getBeautifulDate, {reservationDateFormat} from "../misc/getBeautifulDate";
-import {DAY_SHIFT_LENGTH, ReservationTimeIndex} from "../misc/constants";
-import useReservationWindowMapping from "../hooks/useReservationWindowMapping";
-import {indexToTime} from "../misc/indexToTime";
-import {useRequestContext} from "../misc/RequestContextProvider";
+import "../../../styles/ReservationCalendar.scss";
+import getBeautifulDate, {reservationDateFormat} from "../../../misc/getBeautifulDate";
+import {DAY_SHIFT_LENGTH} from "../../../misc/constants";
+import useReservationWindowMapping from "../../../hooks/useReservationWindowMapping";
+import {useRequestContext} from "../../../misc/RequestContextProvider";
+import {indexToTime} from "../../../misc/indexToTime";
+import {ReservationTimeIndex, ReservationWindow} from "../../../misc/types";
 
 function HeaderCalendarRow() {
     return <div className="calendar-header">

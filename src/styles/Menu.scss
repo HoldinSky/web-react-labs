@@ -1,0 +1,59 @@
+@use "App";
+
+h1 {
+  margin: App.$xxl 0 0;
+}
+
+.menu-content {
+  padding: App.$l;
+
+  .menu-section {
+    margin-top: App.$xl;
+
+    .header {
+      font-size: App.$xxl;
+      text-decoration: underline;
+    }
+
+    .dish-list {
+      display: block;
+
+      background-color: App.$vanilla;
+
+      margin-top: App.$l;
+      padding: App.$l;
+
+      border-radius: App.$l;
+      box-shadow: App.$layout-shadow;
+    }
+  }
+}
+
+.dish-container {
+  margin: App.$m 0;
+
+  padding: 0 App.$m;
+
+  border: solid App.$xs App.$bistre;
+  border-left: none;
+  border-right: none;
+
+  .dish-name {
+    font-size: App.$xxl;
+  }
+}
+
+.dish-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: App.$xxl;
+
+  .image {
+    width: 200px;
+    border-radius: App.$xl;
+    box-shadow: App.$layout-shadow;
+  }
+}

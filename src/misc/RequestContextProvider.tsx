@@ -1,5 +1,5 @@
 import React, {createContext, ReactNode, SetStateAction, useContext, useState} from "react";
-import {ReservationTimeIndex} from "./constants";
+import {ReservationTimeIndex} from "./types";
 
 export interface ReservationRequest {
     dates: Record<string, Set<ReservationTimeIndex>>;

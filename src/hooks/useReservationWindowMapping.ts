@@ -1,7 +1,7 @@
-import {ReservationWindow} from "../components/ReservationDialog";
 import {DAY_SHIFT_LENGTH} from "../misc/constants";
 import getBeautifulDate, {reservationDateFormat} from "../misc/getBeautifulDate";
 import {useMemo} from "react";
+import {ReservationWindow} from "../misc/types";
 
 export function generateReservedRange(): ReservationWindow[] {
     const etalons =

@@ -1,8 +1,4 @@
-export type DateTimeFormatType = {
-    year?: "numeric" | "2-digit";
-    month?: "numeric" | "2-digit" | "long";
-    day?: "numeric" | "2-digit";
-}
+import {DateTimeFormatType} from "./types";
 
 export const dateOptions: DateTimeFormatType = {
     year: "numeric",

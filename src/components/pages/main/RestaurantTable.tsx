@@ -1,11 +1,10 @@
-import "../styles/RestaurantTable.scss";
+import "../../../styles/RestaurantTable.scss";
 import {useRef, useState} from "react";
 import ReservationDialog from "./ReservationDialog";
-import {generateReservedRange} from "../hooks/useReservationWindowMapping";
-import {ReservationRequest, useRequestContext} from "../misc/RequestContextProvider";
-import {indexToTime} from "../misc/indexToTime";
-
-export type SeatCountType = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+import {generateReservedRange} from "../../../hooks/useReservationWindowMapping";
+import {ReservationRequest, useRequestContext} from "../../../misc/RequestContextProvider";
+import {indexToTime} from "../../../misc/indexToTime";
+import {SeatCountType} from "../../../misc/types";
 
 interface Props {
     id: number;
@@ -37,7 +36,7 @@ function RestaurantTable({id, seatsCount}: Props) {
             return;
         }
 
-        Object.entries(newReserve?.dates!).filter(([date, set]) => set.size > 0)
+        Object.entries(newReserve?.dates!).filter(([, set]) => set.size > 0)
             .forEach(([date, set]) => {
                 const times: string[] = [];
 

@@ -5,6 +5,8 @@
   flex-direction: column;
   align-items: center;
 
+  min-height: 100vh;
+
   margin: {
     left: auto;
     right: auto;
@@ -37,7 +39,7 @@
     bottom: App.$l;
   };
 
-  flex-grow: 1;
+  flex-grow: 100;
 }
 
 .layout.header {

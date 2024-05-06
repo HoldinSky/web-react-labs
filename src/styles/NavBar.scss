@@ -1,0 +1,19 @@
+@use "App";
+
+.menu-button {
+  text-decoration: none;
+  color: App.$bistre;
+
+  padding: App.$l App.$xl;
+  margin: 0 App.$l;
+
+  border-radius: App.$l;
+
+  transition: 0.2s;
+
+  box-shadow: App.$shadow;
+
+  &:hover {
+    background-color: App.$tiffany;
+  }
+}

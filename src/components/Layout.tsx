@@ -1,7 +1,7 @@
 import {ReactNode} from "react";
 import "../styles/Layout.scss";
 
-interface Props {
+export interface LayoutProps {
     children: {
         header?: ReactNode;
         body?: ReactNode;
@@ -9,7 +9,7 @@ interface Props {
     }
 }
 
-function Layout({children}: Props) {
+function Layout({children}: LayoutProps) {
     const {header, body, footer} = children;
 
     return (
