@@ -13,6 +13,8 @@
     "@types/node": "^16.18.96",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
+    "axios": "^1.6.8",
+    "json-server": "^1.0.0-alpha.23",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.0",
@@ -22,6 +24,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "fake-api": "json-server --watch ./test-api/menu.json --port 3001",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

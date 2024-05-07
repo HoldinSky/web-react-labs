@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {generateDishes} from "../../misc/generateDishes";
 import {Dish, DishType} from "../../misc/types";
 import {getMappedDishes} from "../../hooks/getMappedDishes";
+import axios from "axios";
 
 function DishRepresentation({dish}: { dish: Dish }) {
     const readableCookingTime = (cookTimeS: number): string => {
@@ -26,8 +27,9 @@ function MenuPage() {
     const [dishes, setDishes] = useState<Record<DishType, Dish[]>>();
 
     useEffect(() => {
-        const collection = generateDishes();
-        setDishes(getMappedDishes(collection));
+        axios.get("http://localhost:3001/menu")
+            .then(resp => setDishes(getMappedDishes(resp.data)))
+            .catch(err => console.error("Failed to get data from API:", err));
     }, []);
 
     return <div style={{width: "100%"}}>
@@ -35,12 +37,12 @@ function MenuPage() {
         <div className="menu-content">
             {dishes &&
                 Object.keys(DishType).map((type) => (
-                    <div className="menu-section">
+                    <div key={type} className="menu-section">
                         <div className="header">
                             {type}
                         </div>
                         <div className="dish-list">
-                            {dishes[type as DishType].map(dish => <DishRepresentation dish={dish}/>)}
+                            {dishes[type as DishType].map(dish => <DishRepresentation key={dish.name} dish={dish}/>)}
                         </div>
                     </div>
                 ))

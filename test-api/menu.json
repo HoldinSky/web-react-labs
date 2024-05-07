@@ -1,0 +1,109 @@
+{
+  "menu": [
+    {
+      "type_": "Main",
+      "name": "Borsch",
+      "portionWeightG": 340,
+      "price": 85,
+      "approxCookTimeS": 1200
+    },
+    {
+      "type_": "Main",
+      "name": "Mushroom Soup",
+      "portionWeightG": 320,
+      "price": 100,
+      "approxCookTimeS": 1320
+    },
+    {
+      "type_": "Main",
+      "name": "Lasagna",
+      "portionWeightG": 440,
+      "price": 120,
+      "approxCookTimeS": 2400
+    },
+    {
+      "type_": "Appetizer",
+      "name": "Sandwich",
+      "portionWeightG": 250,
+      "price": 45,
+      "approxCookTimeS": 120
+    },
+    {
+      "type_": "Appetizer",
+      "name": "Oysters",
+      "portionWeightG": 220,
+      "price": 210,
+      "approxCookTimeS": 300
+    },
+    {
+      "type_": "Garnish",
+      "name": "French Potatoes",
+      "portionWeightG": 460,
+      "price": 150,
+      "approxCookTimeS": 1800
+    },
+    {
+      "type_": "Garnish",
+      "name": "Pasta with seafood",
+      "portionWeightG": 340,
+      "price": 135,
+      "approxCookTimeS": 1200
+    },
+    {
+      "type_": "Cold",
+      "name": "Grated beetroot",
+      "portionWeightG": 230,
+      "price": 75,
+      "approxCookTimeS": 540
+    },
+    {
+      "type_": "Cold",
+      "name": "Aspic",
+      "portionWeightG": 360,
+      "price": 90,
+      "approxCookTimeS": 300
+    },
+    {
+      "type_": "Salad",
+      "name": "Olivier",
+      "portionWeightG": 300,
+      "price": 80,
+      "approxCookTimeS": 900
+    },
+    {
+      "type_": "Salad",
+      "name": "Greek",
+      "portionWeightG": 250,
+      "price": 75,
+      "approxCookTimeS": 600
+    },
+    {
+      "type_": "Drink",
+      "name": "Orange juice",
+      "portionWeightG": 300,
+      "price": 40,
+      "approxCookTimeS": 120
+    },
+    {
+      "type_": "Drink",
+      "name": "Coca-Cola",
+      "portionWeightG": 300,
+      "price": 30,
+      "approxCookTimeS": 120
+    },
+    {
+      "type_": "Alcohol",
+      "name": "Rum (Captain Morgan)",
+      "portionWeightG": 100,
+      "price": 90,
+      "approxCookTimeS": 60
+    },
+    {
+      "type_": "Alcohol",
+      "name": "Cognac (Jack Daniel's)",
+      "portionWeightG": 100,
+      "price": 120,
+      "approxCookTimeS": 60
+    }
+  ]
+}
